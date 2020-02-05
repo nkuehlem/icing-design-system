@@ -1,0 +1,84 @@
+html {
+	/********
+	Day colors
+	*********/
+	--color-chocolate: #57463f ;
+	--color-strawberry: #a66177 ;
+	--color-vanilla: #f9e5bc ;
+	/********
+	Night colors
+	*********/
+	--color-espresso: #363031;
+	--color-mint: #98ff98;
+	/********
+	text colors
+	*********/
+	--color-text-p: #333333 ;
+	--color-text-s: #4D4D4D ;
+	--color-text-d: #f9e5bc ;
+/***************
+typograpgy
+***************/
+	color: var(--color-text-p);
+}
+body {
+	background-color: var(--color-vanilla);
+}
+main {
+	align-content: center;
+	max-width: 750px;
+
+}
+/***************
+header ...I know you said set all padding to 2rem but I didnt like how much that added to the bottom with my nav bar nested in there
+***************/
+.header {
+  	background: var(--color-chocolate);
+  	color: var(--color-strawberry);
+  	font-size: 30px;
+  	padding: 2rem 2rem 0 2rem;
+  	text-align: center;
+}
+/***************
+lists
+***************/
+ul {
+	background-color: var(--color-chocolate);
+}
+li{
+	display: inline;
+	list-style-type: none;
+}
+li.active {
+	text-decoration: underline;
+}
+/***************
+links
+***************/
+a:link, a:visited {
+	display: inline-block;
+	background-color: var(--color-choclate);
+  	color: var(--color-vanilla);
+  	padding: 14px 25px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: var(--color-strawberry);
+}
+/***************
+svg, did you see I figured out how to add a boarder on that primary vanilla color?
+I aded some padding to them so the text names had more space! and to see if you could css an svg heh.
+***************/
+svg {
+	padding: 0 15px 0 15px;
+}
+/**********
+footer
+*****************/
+
+footer {
+	padding: 2rem;
+}
