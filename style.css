@@ -1,0 +1,172 @@
+html {
+	/********
+	Day colors
+	*********/
+	--color-chocolate: #4F3F38 ;
+	--color-chocolate-l: #5F504A ;
+	--color-chocolate-d: #483A33 ;
+	--color-strawberry: #E060A4 ;
+	--color-strawberry-l: #E26EAC ;
+	--color-strawberry-d: #CC5896 ;
+	--color-vanilla: #F4EAD5 ;
+	--color-vanilla-l: #F7F0E1 ;
+	--color-vanilla-d: #DDD3BE ;
+	/********
+	Night colors
+	*********/
+	--color-espresso: #352C2E;
+	--color-espresso-l: #595254;
+	--color-espresso-d: #1D181A;
+	--color-mint: #B3EAA6;
+	--color-mint-l: #C7EFBE;
+	--color-mint-d: #83AB79;
+	/********
+	text colors
+	*********/
+	--color-text-p: #333333 ;
+	--color-text-s: #4D4D4D ;
+	--color-text-d: #f9e5bc ;
+
+	--font-limelight:'Limelight', cursive;
+	--font-josefin:'Josefin Sans', sans-serif;
+}
+/***************
+typography
+***************/
+body {
+	font-family: var(--font-josefin);
+}
+figure{
+	font-family: var(--font-josefin);
+}
+h2 {
+	font-size: 1.5rem;	
+}
+.text-left {
+	text-align: left;
+}
+.josefin {
+	font-family: var(--font-josefin);
+}
+.limelight {
+	font-family: var(--font-limelight);
+}
+/*************************************************
+main layout
+**************************************************/
+html {
+	color: var(--color-text-p);
+	line-height: 1.5;
+}
+body {
+	background-color: var(--color-vanilla);
+	margin: 0 ;
+}
+
+h2.top-margin {
+	margin-top: 4rem;
+}
+main {
+	margin: auto;
+	max-width: 45rem;
+	text-align: center;
+}
+footer{
+	margin: auto;
+	max-width: 45rem;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+
+
+/****************************
+header 
+*****************************/
+header {
+  	background: var(--color-chocolate);
+  	color: var(--color-strawberry);
+  	font-size: 2rem;
+  	font-family: var(--font-limelight);
+  	padding: 2rem 2rem 0 2rem;
+  	text-align: center;
+}
+/***************
+nav
+***************/
+nav {
+	background-color: var(--color-chocolate);
+}
+nav li{
+	display: inline;
+	list-style-type: none;
+}
+.active {
+	text-decoration: underline;
+}
+nav a, nav a:visited {
+	background-color: var(--color-choclate);
+  	color: var(--color-vanilla);
+  	display: inline-block;
+  	padding: .1rem 1.3rem;  
+  	text-align: center;
+  	text-decoration: none;
+}
+nav a:hover {
+	background-color: var(--color-strawberry);
+}
+nav a:focus {
+	background-color: var(--color-strawberry-d);
+}
+nav a:active {
+	background-color: var(--color-strawberry-l);
+}
+/***************
+links
+***************/
+
+a, a:visited {
+	color: var(--color-strawberry-d);
+	text-decoration: none;
+}
+a:focus {
+	color: var(--color-strawberry);
+}
+a:active {
+	color: var(--color-mint-l);
+}
+a:hover {
+	color: var(--color-chocolate);
+}
+/***************
+svg
+***************/
+.color-swatch {
+	padding: 0 1rem;
+}
+/**********
+footer
+*****************/
+
+/*=======================================
+responsive stuff
+========================================*/
+
+img{
+	max-width: 100%;
+	height: auto; 
+}
+
+@media screen and (max-width:50rem){
+	h1{
+		font-size: 2rem;
+	}
+	header{
+		font-size: 1rem;
+		padding: 0;
+	}
+	nav {
+		font-size: 1rem;
+		padding: 0;
+	}
+}
