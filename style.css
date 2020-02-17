@@ -29,6 +29,25 @@ html {
 
 	--font-limelight:'Limelight', cursive;
 	--font-josefin:'Josefin Sans', sans-serif;
+	/********
+	modular type scale ratio 8:9 "major second" = 1.125
+	*********/
+	--size-normal-add6: calc( 1rem * 3.247 );
+	--size-normal-add5: calc( 1rem * 1.802 );
+	--size-normal-add4: calc( 1rem * 1.602 );
+	--size-normal-add3: calc( 1rem * 1.424 );
+	--size-normal-add2: calc( 1rem * 1.266 );
+	--size-normal-add1: calc( 1rem * 1.125 );
+	--size-normal: 1rem ;
+	--size-normal-sub1: calc( 1rem * 0.889 );
+	--size-normal-sub2: calc( 1rem * 0.79 );
+	--size-normal-sub3: calc( 1rem * 0.702 );
+	/********
+	margins so far so good here...but here is variable to let you know I thought about them
+	*********/
+	--margin-standard: 1rem;
+	--margin-standard-add1: 2rem;
+	--margin-standard-sub1: .5rem;
 }
 /***************
 typography
@@ -39,8 +58,29 @@ body {
 figure{
 	font-family: var(--font-josefin);
 }
-h2 {
-	font-size: 1.5rem;	
+h1 {
+	font-size: var(--size-normal-add6);
+	font-weight: 700;
+	line-height: 1.2;
+
+}
+h2{
+	font-size: var(--size-normal-add5);
+	font-weight: 700;
+	line-height: 1.3;	
+}
+h3 {
+	font-size: var(--size-normal-add4);
+	font-weight: 700;	
+}
+h4 {
+	font-size: var(--size-normal-add3);	
+}
+h5 {
+	font-size: var(--size-normal-add2);	
+}
+h6 {
+	font-size: var(--size-normal-add1);	
 }
 .text-left {
 	text-align: left;
@@ -51,15 +91,41 @@ h2 {
 .limelight {
 	font-family: var(--font-limelight);
 }
+.text-featured {
+
+	border-left: 1rem solid var(--color-strawberry-d);
+	border-radius: .5rem ;
+	font-weight: 600;
+	line-height: 1.8;
+	margin: var(--margin-standard);
+	padding-left: 1rem;
+	text-align: left;
+}
+.text-tertiary {
+	font-size: var(--size-normal-sub2)
+}
+.list-ul {
+	list-style-position: inside;
+ 	text-align: left;
+ 	list-style-type: square;
+ }
+
+.list-ol {
+	text-align: left;
+}
+blockquote {
+	font-weight: 500;
+}
+
 /*************************************************
 main layout
 **************************************************/
 html {
 	color: var(--color-text-p);
-	line-height: 1.5;
+	line-height: 1.6;
 }
 body {
-	background-color: var(--color-vanilla);
+	background-color: var(--color-chocolate);
 	margin: 0 ;
 }
 
@@ -67,15 +133,22 @@ h2.top-margin {
 	margin-top: 4rem;
 }
 main {
+	background-color: var(--color-vanilla);
+	border-radius: 1rem 1rem 0 0;
 	margin: auto;
-	max-width: 45rem;
+	max-width: 42rem;
+	padding: 5rem;
 	text-align: center;
+
 }
 footer{
+	background-color: var(--color-vanilla);
+	border-radius: 0 0 1rem 1rem;
 	margin: auto;
-	max-width: 45rem;
+	max-width: 42rem;
+	margin-top: 0;
 	text-align: center;
-	margin-top: 5rem;
+	padding: 5rem;
 }
 
 
@@ -101,9 +174,18 @@ nav li{
 	display: inline;
 	list-style-type: none;
 }
+/*
+you wouldn't belive how many ways I tried to get that double underline! 
+This one is so simple. and feels pretty art decoI would like to figure out 
+the best way to "fix" the part that stops on y, p's or any letter that drops below the 
+(insert corect typography term here) line.
+*/
 .active {
-	text-decoration: underline;
+	text-decoration-line: underline;
+	text-decoration-style: double;
 }
+
+
 nav a, nav a:visited {
 	background-color: var(--color-choclate);
   	color: var(--color-vanilla);
@@ -120,6 +202,17 @@ nav a:focus {
 }
 nav a:active {
 	background-color: var(--color-strawberry-l);
+}
+/***************
+search I know it is not ideal but it IS there!
+***************/
+input[type="search"] {
+	border: 0;
+	border-radius: .5rem;
+	float: right;
+	font-size: .95rem;
+	margin-top: 0;
+	outline: 0;
 }
 /***************
 links
