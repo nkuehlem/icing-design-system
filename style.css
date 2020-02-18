@@ -25,7 +25,14 @@ html {
 	*********/
 	--color-text-p: #333333 ;
 	--color-text-s: #4D4D4D ;
-	--color-text-d: #f9e5bc ;
+	--color-text-d: #808080 ;
+	/********
+	gray colors
+	*********/
+	--color-gray-verylight: #EEEEEE ;
+	--color-gray-light: #CCCCCC ;
+	--color-gray: #999999 ;
+	--color-gray-dark: #666666;
 
 	--font-limelight:'Limelight', cursive;
 	--font-josefin:'Josefin Sans', sans-serif;
@@ -114,7 +121,11 @@ h6 {
 	text-align: left;
 }
 blockquote {
+
+	border: .075rem solid var(--color-gray-light);
+	box-shadow: .3rem .3rem var(--color-strawberry-d);
 	font-weight: 500;
+
 }
 
 /*************************************************
