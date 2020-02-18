@@ -69,8 +69,8 @@ h1 {
 	font-size: var(--size-normal-add6);
 	font-weight: 700;
 	line-height: 1.2;
-
 }
+
 h2{
 	font-size: var(--size-normal-add5);
 	font-weight: 700;
@@ -88,6 +88,12 @@ h5 {
 }
 h6 {
 	font-size: var(--size-normal-add1);	
+}
+.logo {
+	text-shadow: .1rem .1rem .1rem var(--color-vanilla-d);
+}
+.logo:hover {
+	text-shadow: .1rem .1rem .1rem var(--color-vanilla-l);
 }
 .text-left {
 	text-align: left;
