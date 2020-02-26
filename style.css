@@ -198,8 +198,7 @@ the best way to "fix" the part that stops on y, p's or any letter that drops bel
 (insert corect typography term here) line.
 */
 .active {
-	text-decoration-line: underline;
-	text-decoration-style: double;
+	background-color: var(--color-strawberry);
 }
 
 
@@ -212,7 +211,7 @@ nav a, nav a:visited {
   	text-decoration: none;
 }
 nav a:hover {
-	background-color: var(--color-strawberry);
+	text-decoration-line: underline;
 }
 nav a:focus {
 	background-color: var(--color-strawberry-d);
@@ -220,6 +219,15 @@ nav a:focus {
 nav a:active {
 	background-color: var(--color-strawberry-l);
 }
+
+.underline {
+  	border-bottom: 1px solid transparent;
+}
+.underline:hover {
+	border-color: var(--color-vanilla);
+	transition: 450ms ease-out;
+}
+
 /***************
 search I know it is not ideal but it IS there!
 ***************/
@@ -239,20 +247,138 @@ a, a:visited {
 	color: var(--color-strawberry-d);
 	text-decoration: none;
 }
+a:hover {
+	color: var(--color-chocolate-l);
+}
 a:focus {
 	color: var(--color-strawberry);
+	outline-color: var(--color-mint)
 }
 a:active {
-	color: var(--color-mint-l);
+	color: var(--color-mint);
 }
-a:hover {
-	color: var(--color-chocolate);
-}
+
 /***************
 svg
 ***************/
 .color-swatch {
 	padding: 0 1rem;
+}
+
+/**********
+BUTTONS
+*****************/
+.hero-button, .hero-button:visited {
+
+	border: 3px solid;
+	border-radius: 7px;
+	color: var(--color-strawberry);
+	padding: 1.5rem;
+}
+.hero-button:hover {
+	animation: color-flip .6s ease-out;
+	background-color: var(--color-strawberry);
+	border-color: var(--color-strawberry);
+	color: var(--color-vanilla);
+	text-decoration: underline;
+}
+.hero-button:focus {
+	color: var(--color-strawberry-l);
+	border-color: var(--color-strawberry-d);
+}
+.hero-button:active {
+	color: var(--color-mint);
+	border: 5px solid;
+	border-color: var(--color-strawberry-d);
+
+}
+.hero-button-chocolate, .hero-button-chocolate:visited {
+
+	border: 3px solid;
+	border-radius: 7px;
+	color: var(--color-chocolate-l);
+	padding: 1.5rem;
+}
+.hero-button-chocolate:hover {
+	animation: color-flip .6s ease-out;
+	background-color: var(--color-strawberry);
+	border-color: var(--color-strawberry);
+	color: var(--color-vanilla);
+	text-decoration: underline;
+}
+.hero-button-chocolate:focus {
+	color: var(--color-strawberry-l);
+	border-color: var(--color-strawberry-d);
+}
+.hero-button-chocolate:active {
+	color: var(--color-mint);
+	border: 5px solid;
+	border-color: var(--color-strawberry-d);
+
+}
+.normal-button, .normal-button:visited {
+	border: 2px solid;
+	border-radius: 7px;
+	padding: 1rem;
+}
+.normal-button:hover  {
+	color: var(--color-vanilla);
+	background-color: var(--color-strawberry);
+}
+.normal-button:focus {
+
+}
+.normal-button:active{
+ 	background-color: var(--color-strawberry);
+	border-color: var(--color-mint);
+	color: var(--color-mint);
+
+}
+.tertiary-button, .tertiary-button:visited{
+	border: 1px solid;
+	border-radius: 7px;
+	padding: .5rem;
+}
+.tertiary-button:hover {
+
+}
+.tertiary-button:focus {
+
+}
+.tertiary-button:active{
+ background-color: var(--color-chocolate-l);
+}
+
+@keyframes color-flip {
+	0% {
+		background-color: transparent;
+		color: var(--color-strawberry);
+	}
+	50% {
+		/* future tinkering here*/
+	}
+	100% {
+		background-color: var(--color-strawberry);
+		color: var(--color-vanilla);
+		text-decoration: underline;
+		
+	}
+}
+/**********
+details&summary
+*****************/
+details {
+
+	background-color: var(--color-vanilla-l);
+	border: 2px solid var(--color-chocolate-l);
+	font-size: 2rem;
+}
+details div {
+	padding: .5rem;
+	font-size: 1rem;
+}
+summary {
+	outline-color: var(--color-strawberry-l);
 }
 /**********
 footer

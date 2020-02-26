@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <title>Icing Design System</title>
-    <meta name="author" content="nkuehlem">
-    <meta name="description" content="Icing Design system">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Limelight&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
-
+    <head>
+        <meta charset="utf-8">
+        <title>Icing Design System</title>
+        <meta name="author" content="nkuehlem">
+        <meta name="description" content="Icing Design system">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Limelight&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
     <body>
         <header>
             <h1 class="logo">Style</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li ><a href="style.html" class="active">Style</a></li>
-                    <li><a href="components.html">Components</a></li>
-                    <li><a href="layout.html">Layout</a></li>
-                    <li><form action"">
-                        <input type="search" placeholder="Search...">
-                    </form>
-                </li>
+                    <li><a href="index.html"><span class="underline">Home</span></a></li>
+                    <li ><a href="style.html" class="active"><span class="underline">Style</span></a></li>
+                    <li><a href="components.html"><span class="underline">Components</span></a></li>
+                    <li><a href="layout.html"><span class="underline">Layout</span></a></li>
+                    <li>
+                        <form action"">
+                            <input type="search" placeholder="Search...">
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -179,22 +179,25 @@
         </figure>
 <!-- testing the details&summary -->
         <h2>&mdash;Typography&mdash;</h2>
-        <h3>Fonts:</h3>
-            <p>Primary Font: Josefin Sans</p>
-            <p class="limelight">Secondary Font: Limelight</p>
-        <h3>Headings:</h3>
+        <figure>
+            <h3>Fonts:</h3>
+                <p>Primary Font: Josefin Sans</p>
+                <p class="limelight">Secondary Font: Limelight</p>
+            <h3>Headings:</h3>
+        </figure>
         <figure>
             <details>
                 <summary>
                     <h1>Primary Font: Josefin Sans &lth1&gt click me to see more</h1>
                 </summary>
+                <div>
                     <h2>Primary Font: Josefin Sans &lth2&gt</h2>
                     <h3>Primary Font: Josefin Sans &lth3&gt</h3>
                     <h4>Primary Font: Josefin Sans &lth1&gt</h4>
                     <h5>Primary Font: Josefin Sans &lth2&gt</h5>
                     <h6>Primary Font: Josefin Sans &lth3&gt</h6>
                     <p>Primary Font: Josefin Sans &ltp&gt</p>
-
+                </div>
             </details>
         </figure>
         <figure>
