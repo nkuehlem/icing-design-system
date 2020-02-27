@@ -133,6 +133,24 @@ blockquote {
 	font-weight: 500;
 
 }
+/***************
+links
+***************/
+
+a, a:visited {
+	color: var(--color-strawberry-d);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--color-chocolate-l);
+}
+a:focus {
+	color: var(--color-strawberry);
+	outline-color: var(--color-mint)
+}
+a:active {
+	color: var(--color-mint);
+}
 
 /*************************************************
 main layout
@@ -158,16 +176,6 @@ main {
 	text-align: center;
 
 }
-footer{
-	background-color: var(--color-vanilla);
-	border-radius: 0 0 1rem 1rem;
-	margin: auto;
-	max-width: 42rem;
-	margin-top: 0;
-	text-align: center;
-	padding: 5rem;
-}
-
 
 
 /****************************
@@ -238,24 +246,6 @@ input[type="search"] {
 	font-size: .95rem;
 	margin-top: 0;
 	outline: 0;
-}
-/***************
-links
-***************/
-
-a, a:visited {
-	color: var(--color-strawberry-d);
-	text-decoration: none;
-}
-a:hover {
-	color: var(--color-chocolate-l);
-}
-a:focus {
-	color: var(--color-strawberry);
-	outline-color: var(--color-mint)
-}
-a:active {
-	color: var(--color-mint);
 }
 
 /***************
@@ -383,6 +373,16 @@ summary {
 /**********
 footer
 *****************/
+footer{
+	background-color: var(--color-vanilla);
+	border-radius: 0 0 1rem 1rem;
+	margin: auto;
+	max-width: 42rem;
+	margin-top: 0;
+	text-align: center;
+	padding: 5rem;
+}
+
 
 /*=======================================
 responsive stuff
