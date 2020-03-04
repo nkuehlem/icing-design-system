@@ -75,6 +75,16 @@
             </details>
         </figure>
 
+        <h2>&mdash;Modal Dialog&mdash;</h2>
+
+        <figure>
+           <button id="open-modal" type="button">Open Modal</button>
+           <dialog id="modal-demo">
+                <h2> Primary Heading</h2>
+                <p> Paragraph- Bacon ipsum dolor amet burgdoggen kielbasa pork loin turducken chuck brisket boudin bacon kevin cow shankle jerky. Pork meatloaf chicken frankfurter pork chop. Bacon strip steak pig, t-bone kielbasa doner meatball pork loin porchetta frankfurter andouille alcatra meatloaf spare ribs. Capicola picanha prosciutto short ribs andouille, pig boudin pork ham strip steak short loin. T-bone bresaola fatback, kielbasa meatball beef tri-tip flank jowl sausage. Alcatra short loin doner, corned beef cupim beef boudin shank</p>
+           </dialog> 
+        </figure>
+
         <h4>Test home Icon</h4>
 
         <figure><img src="images/home-cupcake.svg" alt="cupcake-icon-home"></figure>
@@ -100,5 +110,23 @@
         </ul>
     </nav>
     </footer>
+   <script>
+        document.addEventListener('DOMContentLoaded', function(){
+
+            const modal = document.querySelector('dialog');
+            const open = document.getElementById('open-modal');
+
+            open.addEventListener('click', () => {
+            modal.showModal();
+            });
+
+            modal.addEventListener('click', event => {
+            if (event.target === modal) {
+            modal.close('cancelled');
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>

@@ -37,18 +37,22 @@ html {
 	--font-limelight:'Limelight', cursive;
 	--font-josefin:'Josefin Sans', sans-serif;
 	/********
-	modular type scale ratio 8:9 "major second" = 1.125
+	modular type scale ratio 8:9 "major second" = 1.125, I hope ththats how to make it smaller with a -ratio_number...ack  something went wrong !
 	*********/
-	--size-normal-add6: calc( 1rem * 3.247 );
-	--size-normal-add5: calc( 1rem * 1.802 );
-	--size-normal-add4: calc( 1rem * 1.602 );
-	--size-normal-add3: calc( 1rem * 1.424 );
-	--size-normal-add2: calc( 1rem * 1.266 );
-	--size-normal-add1: calc( 1rem * 1.125 );
-	--size-normal: 1rem ;
-	--size-normal-sub1: calc( 1rem * 0.889 );
-	--size-normal-sub2: calc( 1rem * 0.79 );
-	--size-normal-sub3: calc( 1rem * 0.702 );
+	--ratio: 1.125;
+	--ratio-negative: -1.125;
+	--size-normal-add8: calc( var(--normal-add7) * var(--ratio) );
+	--size-normal-add7: calc( var(--normal-add6) * var(--ratio) );
+	--size-normal-add6: calc( var(--normal-add5) * var(--ratio) );
+	--size-normal-add5: calc( var(--normal-add4) * var(--ratio) );
+	--size-normal-add4: calc( var(--normal-add3) * var(--ratio) );
+	--size-normal-add3: calc( var(--normal-add2) * var(--ratio) );
+	--size-normal-add2: calc( var(--normal-add1) * var(--ratio) );
+	--size-normal-add1: calc( 1rem * var(--ratio) );
+	--size-normal: 1rem;
+	--size-normal-sub1: calc( 1rem * var(--ratio-negative) );
+	--size-normal-sub2: calc( var(--size-normal-sub1) * var(--ratio-negative) );
+	--size-normal-sub3: calc( var(--size-normal-sub2) * var(--ratio-negative) );
 	/********
 	margins so far so good here...but here is variable to let you know I thought about them
 	*********/
@@ -95,9 +99,6 @@ h6 {
 .logo:hover {
 	text-shadow: .1rem .1rem .1rem var(--color-vanilla-l);
 }
-.text-left {
-	text-align: left;
-}
 .josefin {
 	font-family: var(--font-josefin);
 }
@@ -117,13 +118,13 @@ h6 {
 .text-tertiary {
 	font-size: var(--size-normal-sub2)
 }
-.list-ul {
+ul {
 	list-style-position: inside;
  	text-align: left;
  	list-style-type: square;
  }
 
-.list-ol {
+ol {
 	text-align: left;
 }
 blockquote {
@@ -164,7 +165,7 @@ body {
 	margin: 0 ;
 }
 
-h2.top-margin {
+h2 {
 	margin-top: 4rem;
 }
 main {
@@ -176,7 +177,18 @@ main {
 	text-align: center;
 
 }
-
+p {
+	text-align: left;
+}
+@media screen and (max-width:50rem){
+	h1{
+		font-size: 2rem;
+	}
+	header{
+		font-size: 1rem;
+		padding: 0;
+	}
+}
 
 /****************************
 header 
@@ -189,6 +201,9 @@ header {
   	padding: 2rem 2rem 0 2rem;
   	text-align: center;
 }
+header h1 {
+	font-size: 3.25rem;
+}
 /***************
 nav
 ***************/
@@ -199,17 +214,13 @@ nav li{
 	display: inline;
 	list-style-type: none;
 }
-/*
-you wouldn't belive how many ways I tried to get that double underline! 
-This one is so simple. and feels pretty art decoI would like to figure out 
-the best way to "fix" the part that stops on y, p's or any letter that drops below the 
-(insert corect typography term here) line.
-*/
 .active {
 	background-color: var(--color-strawberry);
 }
 
-
+nav ul {
+	text-align: center;
+}
 nav a, nav a:visited {
 	background-color: var(--color-choclate);
   	color: var(--color-vanilla);
@@ -234,6 +245,12 @@ nav a:active {
 .underline:hover {
 	border-color: var(--color-vanilla);
 	transition: 450ms ease-out;
+}
+@media screen and (max-width:50rem){
+	nav {
+		font-size: 1rem;
+		padding: 0;
+	}
 }
 
 /***************
@@ -371,6 +388,28 @@ summary {
 	outline-color: var(--color-strawberry-l);
 }
 /**********
+modals
+*****************/
+dialog {
+	animation: modal-animation .45s ease;
+	background-color: var(--color-vanilla-l);
+	border: double 8px var(--color-chocolate-d);
+
+}
+dialog::backdrop {
+	background-color: rgba(224, 96, 164, .9);
+}
+@keyframes modal-animation {
+
+	0% {
+		transform: translateY(10rem) scale(.5);
+	}
+	100% {
+		transform: translateY(0) scale(1);
+	}
+}
+
+/**********
 footer
 *****************/
 footer{
@@ -393,16 +432,3 @@ img{
 	height: auto; 
 }
 
-@media screen and (max-width:50rem){
-	h1{
-		font-size: 2rem;
-	}
-	header{
-		font-size: 1rem;
-		padding: 0;
-	}
-	nav {
-		font-size: 1rem;
-		padding: 0;
-	}
-}
