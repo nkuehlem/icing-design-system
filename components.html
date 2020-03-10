@@ -30,20 +30,20 @@
         <h2>&mdash;Link Buttons&mdash;</h2>
         <h3>Hero  Buttons</h3>
         <figure>
-            <a href="" class="hero-button">Hero Button</a>
-            <a href="" class="hero-button-chocolate">Hero Button</a>
+            <a href="" class="hero-button-link">Hero Button</a>
+            <a href="" class="hero-button-link-chocolate">Hero Button</a>
         </figure>
 
         <h3>Normal  Buttons</h3>
 
         <figure>
-            <a href="" class="normal-button">Normal Button</a>
+            <a href="" class="normal-button-link">Normal Button</a>
         </figure>
 
         <h3>Tertiary  Buttons</h3>
 
         <figure>
-            <a href="" class="tertiary-button">Tertiary Button</a>
+            <a href="" class="tertiary-button-link">Tertiary Button</a>
         </figure>
 
         <h2>&mdash;Accordians&mdash;</h2>
@@ -78,14 +78,70 @@
         <h2>&mdash;Modal Dialog&mdash;</h2>
 
         <figure>
-           <button id="open-modal" type="button">Open Modal</button>
+           <button id="open-modal" type="button-link">Open Modal</button>
            <dialog id="modal-demo">
                 <h2> Primary Heading</h2>
                 <p> Paragraph- Bacon ipsum dolor amet burgdoggen kielbasa pork loin turducken chuck brisket boudin bacon kevin cow shankle jerky. Pork meatloaf chicken frankfurter pork chop. Bacon strip steak pig, t-bone kielbasa doner meatball pork loin porchetta frankfurter andouille alcatra meatloaf spare ribs. Capicola picanha prosciutto short ribs andouille, pig boudin pork ham strip steak short loin. T-bone bresaola fatback, kielbasa meatball beef tri-tip flank jowl sausage. Alcatra short loin doner, corned beef cupim beef boudin shank</p>
            </dialog> 
         </figure>
 
-        <h4>Test home Icon</h4>
+        <h2>&mdash;Form Inputs&mdash;</h2>
+
+        <h3>Text</h3>
+
+        <figure>
+            <form action="">
+                <div>
+                    <label for="text">Text Field</label>
+                    <input type="text" id="text" name="text" placeholder="Placeholder text">
+                    <input type="submit" value="Submit This Form">
+                </div>
+                  
+            </form>
+        </figure>
+
+        <h3>Textarea</h3>
+
+        <figure>
+            <form action="">
+                <div>
+                    <label for="textarea">Text Area</label>
+                    <p class="helper-text"> Helper or "Instruction Text"</p>
+                    <textarea id="textarea" name="textarea" placeholder="Enter message here"></textarea>
+                    <input type="submit" value="Submit This Form">
+                </div>
+                  
+            </form>
+        </figure>
+
+        <h3>Select</h3>
+
+        <figure>
+            <form action="">
+                <div>
+                    <label for="Selection">Selection</label>
+                    <select id="selection" name="selection">
+                        <option disabled selected hidden>Choose Wisely</option>
+                        <option>Option 1 Earthlings-UN</option>
+                        <option>Option 2 Martians-MCR</option>
+                        <option>Option 3 Belters-OPA</option>
+                    </select>
+                    <input type="submit" value="Submit This Form">
+                </div>  
+            </form>
+        </figure>
+
+        <h3>Submit Button</h3>
+
+        <figure>
+            <form action="">
+                <div>
+                <input type="submit" value="Submit This Form"> 
+                </div> 
+            </form>
+        </figure>
+
+        <h3>Test Home Icon</h3>
 
         <figure>
             <img src="images/Icon_home.svg" alt="cupcake-icon-home" width="40%" height="40%">
@@ -99,24 +155,24 @@
     <footer>
         <p>Icing Design System created by: Nick Kuehlem</p>
         <p>UX Designer-Native Austinite-Connoisseur of all things nerdy</p>
-    <nav>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/nkuehlem.html">Linkedin</a></li>
-          <li><a href="mailto:nick.kuehlem@g.austincc.edu? subject=from design system">GMail</a></li>
-          <li><a href="https://www.google.com">Twitter</a></li>
-        </ul>
-    </nav>
-        <p>© 2020 Nick Kuehlem</p>
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="style.html">Style</a></li>
-          <li><a class="active" href="components.html">Components</a></li>
-          <li><a href="layout.html">Layout</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/nkuehlem.html">Linkedin</a></li>
+              <li><a href="mailto:nick.kuehlem@g.austincc.edu? subject=from design system">GMail</a></li>
+              <li><a href="https://www.google.com">Twitter</a></li>
+            </ul>
+        </nav>
+            <p>© 2020 Nick Kuehlem</p>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="style.html">Style</a></li>
+              <li><a class="active" href="components.html">Components</a></li>
+              <li><a href="layout.html">Layout</a></li>
+            </ul>
+        </nav>
     </footer>
-   <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function(){
 
             const modal = document.querySelector('dialog');

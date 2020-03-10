@@ -36,23 +36,27 @@ html {
 
 	--font-limelight:'Limelight', cursive;
 	--font-josefin:'Josefin Sans', sans-serif;
+	/*****
+	error colors
+	******/
+	--color-error: #cc0000;
+	--color-error-l: #FFCCCC;
 	/********
 	modular type scale ratio 8:9 "major second" = 1.125, I hope ththats how to make it smaller with a -ratio_number...ack  something went wrong !
 	*********/
 	--ratio: 1.125;
-	--ratio-negative: -1.125;
-	--size-normal-add8: calc( var(--normal-add7) * var(--ratio) );
-	--size-normal-add7: calc( var(--normal-add6) * var(--ratio) );
-	--size-normal-add6: calc( var(--normal-add5) * var(--ratio) );
-	--size-normal-add5: calc( var(--normal-add4) * var(--ratio) );
-	--size-normal-add4: calc( var(--normal-add3) * var(--ratio) );
-	--size-normal-add3: calc( var(--normal-add2) * var(--ratio) );
-	--size-normal-add2: calc( var(--normal-add1) * var(--ratio) );
+	--size-normal-add8: calc( var(--size--normal-add7) * var(--ratio) );
+	--size-normal-add7: calc( var(--size--normal-add6) * var(--ratio) );
+	--size-normal-add6: calc( var(--size--normal-add5) * var(--ratio) );
+	--size-normal-add5: calc( var(--size--normal-add4) * var(--ratio) );
+	--size-normal-add4: calc( var(--size--normal-add3) * var(--ratio) );
+	--size-normal-add3: calc( var(--size--normal-add2) * var(--ratio) );
+	--size-normal-add2: calc( var(--size--normal-add1) * var(--ratio) );
 	--size-normal-add1: calc( 1rem * var(--ratio) );
 	--size-normal: 1rem;
-	--size-normal-sub1: calc( 1rem * var(--ratio-negative) );
-	--size-normal-sub2: calc( var(--size-normal-sub1) * var(--ratio-negative) );
-	--size-normal-sub3: calc( var(--size-normal-sub2) * var(--ratio-negative) );
+	--size-normal-sub1: calc( 1rem / var(--ratio) );
+	--size-normal-sub2: calc( var(--size-normal-sub1) / var(--ratio) );
+	--size-normal-sub3: calc( var(--size-normal-sub2) / var(--ratio) );
 	/********
 	margins so far so good here...but here is variable to let you know I thought about them
 	*********/
@@ -66,9 +70,11 @@ typography
 body {
 	font-family: var(--font-josefin);
 }
+
 figure{
 	font-family: var(--font-josefin);
 }
+
 h1 {
 	font-size: var(--size-normal-add6);
 	font-weight: 700;
@@ -80,33 +86,41 @@ h2{
 	font-weight: 700;
 	line-height: 1.3;	
 }
+
 h3 {
 	font-size: var(--size-normal-add4);
 	font-weight: 700;	
 }
+
 h4 {
 	font-size: var(--size-normal-add3);	
 }
+
 h5 {
 	font-size: var(--size-normal-add2);	
 }
+
 h6 {
 	font-size: var(--size-normal-add1);	
 }
+
 .logo {
 	text-shadow: .1rem .1rem .1rem var(--color-vanilla-d);
 }
+
 .logo:hover {
 	text-shadow: .1rem .1rem .1rem var(--color-vanilla-l);
 }
+
 .josefin {
 	font-family: var(--font-josefin);
 }
+
 .limelight {
 	font-family: var(--font-limelight);
 }
-.text-featured {
 
+.text-featured {
 	border-left: 1rem solid var(--color-strawberry-d);
 	border-radius: .5rem ;
 	font-weight: 600;
@@ -115,9 +129,11 @@ h6 {
 	padding-left: 1rem;
 	text-align: left;
 }
+
 .text-tertiary {
 	font-size: var(--size-normal-sub2)
 }
+
 ul {
 	list-style-position: inside;
  	text-align: left;
@@ -127,12 +143,11 @@ ul {
 ol {
 	text-align: left;
 }
-blockquote {
 
+blockquote {
 	border: .075rem solid var(--color-gray-light);
 	box-shadow: .3rem .3rem var(--color-strawberry-d);
 	font-weight: 500;
-
 }
 /***************
 links
@@ -142,13 +157,16 @@ a, a:visited {
 	color: var(--color-strawberry-d);
 	text-decoration: none;
 }
+
 a:hover {
 	color: var(--color-chocolate-l);
 }
+
 a:focus {
 	color: var(--color-strawberry);
 	outline-color: var(--color-mint)
 }
+
 a:active {
 	color: var(--color-mint);
 }
@@ -160,6 +178,7 @@ html {
 	color: var(--color-text-p);
 	line-height: 1.6;
 }
+
 body {
 	background-color: var(--color-chocolate);
 	margin: 0 ;
@@ -168,6 +187,11 @@ body {
 h2 {
 	margin-top: 4rem;
 }
+
+h3 {
+	margin-top: 2rem;
+}
+
 main {
 	background-color: var(--color-vanilla);
 	border-radius: 1rem 1rem 0 0;
@@ -175,15 +199,18 @@ main {
 	max-width: 42rem;
 	padding: 5rem;
 	text-align: center;
-
 }
+
 p {
 	text-align: left;
 }
+
 @media screen and (max-width:50rem){
+
 	h1{
 		font-size: 2rem;
 	}
+
 	header{
 		font-size: 1rem;
 		padding: 0;
@@ -201,19 +228,23 @@ header {
   	padding: 2rem 2rem 0 2rem;
   	text-align: center;
 }
+
 header h1 {
 	font-size: 3.25rem;
 }
+
 /***************
 nav
 ***************/
 nav {
 	background-color: var(--color-chocolate);
 }
+
 nav li{
 	display: inline;
 	list-style-type: none;
 }
+
 .active {
 	background-color: var(--color-strawberry);
 }
@@ -221,6 +252,7 @@ nav li{
 nav ul {
 	text-align: center;
 }
+
 nav a, nav a:visited {
 	background-color: var(--color-choclate);
   	color: var(--color-vanilla);
@@ -229,12 +261,15 @@ nav a, nav a:visited {
   	text-align: center;
   	text-decoration: none;
 }
+
 nav a:hover {
 	text-decoration-line: underline;
 }
+
 nav a:focus {
 	background-color: var(--color-strawberry-d);
 }
+
 nav a:active {
 	background-color: var(--color-strawberry-l);
 }
@@ -242,11 +277,14 @@ nav a:active {
 .underline {
   	border-bottom: 1px solid transparent;
 }
+
 .underline:hover {
 	border-color: var(--color-vanilla);
 	transition: 450ms ease-out;
 }
+
 @media screen and (max-width:50rem){
+
 	nav {
 		font-size: 1rem;
 		padding: 0;
@@ -273,86 +311,86 @@ svg
 }
 
 /**********
-BUTTONS
+Button links
 *****************/
-.hero-button, .hero-button:visited {
-
+.hero-button-link, .hero-button-link:visited {
 	border: 3px solid;
 	border-radius: 7px;
 	color: var(--color-strawberry);
-	padding: 1.5rem;
+	padding: 1rem;
 }
-.hero-button:hover {
+
+.hero-button-link:hover {
 	animation: color-flip .6s ease-out;
 	background-color: var(--color-strawberry);
 	border-color: var(--color-strawberry);
 	color: var(--color-vanilla);
 	text-decoration: underline;
 }
-.hero-button:focus {
+
+.hero-button-link:focus {
 	color: var(--color-strawberry-l);
 	border-color: var(--color-strawberry-d);
 }
-.hero-button:active {
-	color: var(--color-mint);
-	border: 5px solid;
-	border-color: var(--color-strawberry-d);
 
+.hero-button-link:active {
+	color: var(--color-mint);
+	border: 3px double;
+	border-color: var(--color-strawberry-d);
 }
-.hero-button-chocolate, .hero-button-chocolate:visited {
+
+.hero-button-link-chocolate, .hero-button-link-chocolate:visited {
 
 	border: 3px solid;
 	border-radius: 7px;
 	color: var(--color-chocolate-l);
-	padding: 1.5rem;
+	padding: 1rem;
 }
-.hero-button-chocolate:hover {
+
+.hero-button-link-chocolate:hover {
 	animation: color-flip .6s ease-out;
 	background-color: var(--color-strawberry);
 	border-color: var(--color-strawberry);
 	color: var(--color-vanilla);
 	text-decoration: underline;
 }
-.hero-button-chocolate:focus {
+
+.hero-button-link-chocolate:focus {
 	color: var(--color-strawberry-l);
 	border-color: var(--color-strawberry-d);
 }
-.hero-button-chocolate:active {
-	color: var(--color-mint);
-	border: 5px solid;
-	border-color: var(--color-strawberry-d);
 
+.hero-button-link-chocolate:active {
+	color: var(--color-mint);
+	border: 3px double;
+	border-color: var(--color-strawberry-d);
 }
-.normal-button, .normal-button:visited {
+
+.normal-button-link, .normal-button-link:visited {
 	border: 2px solid;
 	border-radius: 7px;
 	padding: 1rem;
 }
-.normal-button:hover  {
+
+.normal-button-link:hover  {
 	color: var(--color-vanilla);
 	background-color: var(--color-strawberry);
 }
-.normal-button:focus {
 
-}
-.normal-button:active{
+.normal-button-link:active{
  	background-color: var(--color-strawberry);
+ 	border: double;
 	border-color: var(--color-mint);
 	color: var(--color-mint);
-
 }
-.tertiary-button, .tertiary-button:visited{
+
+.tertiary-button-link, .tertiary-button-link:visited{
 	border: 1px solid;
 	border-radius: 7px;
 	padding: .5rem;
 }
-.tertiary-button:hover {
 
-}
-.tertiary-button:focus {
-
-}
-.tertiary-button:active{
+.tertiary-button-link:active{
  background-color: var(--color-chocolate-l);
 }
 
@@ -361,32 +399,35 @@ BUTTONS
 		background-color: transparent;
 		color: var(--color-strawberry);
 	}
+
 	50% {
 		/* future tinkering here*/
 	}
+
 	100% {
 		background-color: var(--color-strawberry);
 		color: var(--color-vanilla);
-		text-decoration: underline;
-		
+		text-decoration: underline;	
 	}
 }
 /**********
 details&summary
 *****************/
 details {
-
 	background-color: var(--color-vanilla-l);
 	border: 2px solid var(--color-chocolate-l);
 	font-size: 2rem;
 }
+
 details div {
 	padding: .5rem;
 	font-size: 1rem;
 }
+
 summary {
 	outline-color: var(--color-strawberry-l);
 }
+
 /**********
 modals
 *****************/
@@ -396,17 +437,94 @@ dialog {
 	border: double 8px var(--color-chocolate-d);
 
 }
+
 dialog::backdrop {
 	background-color: rgba(224, 96, 164, .9);
 }
+
 @keyframes modal-animation {
 
 	0% {
 		transform: translateY(10rem) scale(.5);
 	}
+
 	100% {
 		transform: translateY(0) scale(1);
 	}
+}
+/**********
+Forms
+*****************/
+form div {
+	background-color: var(--color-chocolate-d);
+	border: 10px double;
+	border-color: var(--color-vanilla-d);
+	border-radius: 7px;
+	color: var(--color-strawberry-l);
+	padding: .5rem;
+}
+
+label,
+input,
+select,
+textarea {
+	color: var(--chocolate);
+	border-radius: 7px;
+	display: block;
+	margin: auto;
+	padding: 1rem;
+}
+
+input, input:visited,
+select, select:visited,
+textarea, textarea:visited {
+	background-color: var(--color-vanilla-l);
+}
+
+select:hover,
+textarea:hover {
+	background-color: var(--color-vanilla);
+}
+div input:hover{
+	background-color: var(--color-vanilla)
+}
+input:focus, input:active,
+select:focus, select:active,
+textarea:focus, textarea:active{
+	outline-color: var(--color-strawberry);
+}
+
+input:disabled {
+ 	text-decoration: line-through;
+}
+
+label {
+	margin-top: 2rem;
+}
+
+[type="submit"],
+button {
+	background-color: var(--color-strawberry-d);
+	border: none;
+	border-radius: 0.4rem;
+	color: var(--color-vanilla-l);
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	padding: .5rem;
+}
+
+[type="submit"]:hover, [type="submit"]:focus
+button:hover, button:focus {
+	background-color: var(--color-strawberry-l);
+}
+
+.helper-text {
+	text-align: center;
+	font-size: var(--size-normal-sub2);
+}
+
+.error {
+	border-color: var(--color-error);
 }
 
 /**********
@@ -422,9 +540,17 @@ footer{
 	padding: 5rem;
 }
 
+/**********
+figure
+*****************/
+
+figure {
+	margin-top: 2rem;
+}
+
 
 /*=======================================
-responsive stuff
+images
 ========================================*/
 
 img{
