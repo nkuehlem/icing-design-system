@@ -242,7 +242,7 @@ main {
 	border-radius: 1rem 1rem 0 0;
 	margin: auto;
 	max-width: 42rem;
-	padding: 5rem;
+	padding: 1rem;
 	text-align: center;
 }
 
@@ -358,17 +358,13 @@ nav a:active {
 	margin-top: 1rem;
  }
 
-
-
-/***************
-I never closed top media query.
-use px for media query!
-***************/
-
 @media screen and (min-width: 800px){
 
 	nav li {
 		display: inline-block;
+	}
+	Main {
+		padding: 5rem;
 	}
 }
 
@@ -515,6 +511,7 @@ Button links
 }
 
 .normal-button-link, .normal-button-link:visited {
+	background: var(--color-vanilla-l); /* fallback color for old browsers */background: rgba(255, 255, 255, 0.2);
 	border: 2px solid;
 	border-radius: 7px;
 	padding: 1rem;
@@ -617,7 +614,7 @@ input,
 select,
 textarea {
 	border-radius: 7px;
-	color: var(--chocolate);
+	color: var(--color-chocolate);
 	display: block;
 	margin: auto;
 	padding: 1rem;
@@ -675,11 +672,68 @@ button:hover, button:focus {
 .error {
 	border-color: var(--color-error);
 }
+/**********
+CARDS
+*****************/
+.card_article {
+	background-color: var(--color-vanilla-l);
+	box-shadow: 2px 2px 4px var(--color-espresso-l);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 25rem;
+	padding: 1rem;
+}
+
+.card_article:hover {
+	box-shadow: 4px 4px 8px var(--color-espresso-l);
+}
+
+/*************
+so subtle on the gradient I know but I figure less is more here...and still cant decide if I like the dark on the outside more than this light on the outside to dark.
+this circle farthest-side makes radial gradients MUCH better imo.
+************/
+.card_profile {
+	background-color: var(--color-vanilla-l);
+	background-image: radial-gradient(circle farthest-side, #DDD3BE, #F7F0E1);
+	background-repeat: no-repeat;
+	box-shadow: 2px 2px 4px var(--color-espresso-l);
+	display: inline-block;
+	max-width: 25rem;
+	padding: 1.5rem;
+}
+
+.card_profile:hover {
+	box-shadow: 4px 4px 8px var(--color-espresso-l);
+}
+/****
+I am curious as to tricks on setting up text to work in front of ANY photo...I tried my best here with a text shadow and making the background on that button opacity.2 (255 255 255 color)
+*****/
+.card_call_to_action {
+	background-attachment: fixed;
+	background-image: url(images/sara-cervera-7m2MRtNTOSE-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 2px 2px 4px var(--color-espresso-l);
+	display: flex;
+	color: var(--color-strawberry-l);
+	flex-direction: column;
+	max-width: 30rem;
+	padding: 1rem;
+}
+.card_call_to_action h1 {
+	text-shadow: 1.5px .5px  var(--color-vanilla-l);
+
+}
+.card_call_to_action:hover {
+	box-shadow: 4px 4px 8px var(--color-espresso-l);
+}
+
 
 /**********
 footer
 *****************/
-footer{
+footer {
 	background-color: var(--color-vanilla);
 	border-radius: 0 0 1rem 1rem;
 	margin: auto;
@@ -702,7 +756,7 @@ figure {
 images
 ========================================*/
 
-img{
+img {
 	max-width: 100%;
 	height: auto; 
 }
