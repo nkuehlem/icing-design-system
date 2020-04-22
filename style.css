@@ -158,12 +158,14 @@ blockquote {
 	box-shadow: .3rem .3rem var(--color-strawberry-d);
 	font-weight: 500;
 }
+/******************************************
+Notifications
+************************************************/
 
 .notification-error {
 	align-content: center;
 	background-color: var(--color-error-light);
 	border:1px solid var(--color-error);
-	border-radius: .5rem;
 	color: var(--color-error);
 	display: flex;
 	justify-content: space-between;
@@ -174,18 +176,18 @@ blockquote {
 	align-content: center;
 	background-color: var(--color-warning-light);
 	border:1px solid var(--color-warning);
-	border-radius: .5rem;
+	border-radius: .2rem;
 	color: var(--color-warning);
 	display: flex;
 	justify-content: space-between;
-	padding: .5rem;;
+	padding: .5rem;
 }
 
 .notification-neutral {
 	align-content: center;
 	background-color: var(--color-neutral-light);
 	border:1px solid var(--color-neutral);
-	border-radius: .5rem;
+	border-radius: .4rem;
 	color: var(--color-neutral);
 	display: flex;
 	justify-content: space-between;
@@ -196,7 +198,7 @@ blockquote {
 	align-content: center;
 	background-color: var(--color-success-light);
 	border:1px solid var(--color-success);
-	border-radius: .5rem;
+	border-radius: .6rem;
 	color: var(--color-success);
 	display: flex;
 	justify-content: space-between;
@@ -290,8 +292,7 @@ hero-banner
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	justify-content: space-between;
-	width: 100vw;
+	justify-content: center;
 }
 
 .hero h1{
@@ -681,7 +682,7 @@ CARDS
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 25rem;
+	max-width: 15rem;
 	padding: 1rem;
 }
 
@@ -699,7 +700,8 @@ this circle farthest-side makes radial gradients MUCH better imo.
 	background-repeat: no-repeat;
 	box-shadow: 2px 2px 4px var(--color-espresso-l);
 	display: inline-block;
-	max-width: 25rem;
+	max-width: 45rem;
+	min-width: 300rem;
 	padding: 1.5rem;
 }
 
@@ -718,17 +720,91 @@ I am curious as to tricks on setting up text to work in front of ANY photo...I t
 	display: flex;
 	color: var(--color-strawberry-l);
 	flex-direction: column;
-	max-width: 30rem;
+	max-width: 40rem;
 	padding: 1rem;
 }
 .card_call_to_action h1 {
-	text-shadow: 1.5px .5px  var(--color-vanilla-l);
+	text-shadow: 1.5px .5px  var(--color-vanilla-l),
+				 2px 2px 6px var(--color-espresso-d);
 
 }
 .card_call_to_action:hover {
 	box-shadow: 4px 4px 8px var(--color-espresso-l);
 }
+/********
+grid containers 
+***********/
+.grid-container {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 1fr;
+}
+/******
+.grid-card-grid {
+	grid-gap: 1rem;
+	grid-template-columns: 1fr;
+}
 
+.grid-card-callouts {
+	grid-gap: 1rem;
+	grid-template-columns: 1fr;
+}
+********/
+
+
+@media screen and (min-width: 600px){
+
+	.grid-card-grid{	
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.grid-card-callouts{
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+
+
+
+@media screen and (min-width: 900px){
+/********** this did not look good 
+	.grid-card-grid{	
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+*****************/
+	.grid-card-callouts {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	.callouts-1 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	.callouts-2{
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	.callouts-3 {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+
+	.callouts-5 {
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+
+	.callouts-6 {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+
+}
 
 /**********
 footer
