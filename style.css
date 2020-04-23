@@ -214,7 +214,7 @@ a, a:visited {
 }
 
 a:hover {
-	color: var(--color-chocolate-l);
+	color: var(--color-chocolate);
 }
 
 a:focus {
@@ -615,7 +615,7 @@ input,
 select,
 textarea {
 	border-radius: 7px;
-	color: var(--color-chocolate);
+	color: var(--color-strawberry-l);
 	display: block;
 	margin: auto;
 	padding: 1rem;
@@ -677,12 +677,13 @@ button:hover, button:focus {
 CARDS
 *****************/
 .card_article {
-	background-color: var(--color-vanilla-l);
+	background-color: var(--color-vanilla-d);
+	background-image: radial-gradient(circle farthest-side, #F7F0E1, #DDD3BE);
 	box-shadow: 2px 2px 4px var(--color-espresso-l);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 15rem;
+	max-width: 45rem;
 	padding: 1rem;
 }
 
@@ -690,10 +691,7 @@ CARDS
 	box-shadow: 4px 4px 8px var(--color-espresso-l);
 }
 
-/*************
-so subtle on the gradient I know but I figure less is more here...and still cant decide if I like the dark on the outside more than this light on the outside to dark.
-this circle farthest-side makes radial gradients MUCH better imo.
-************/
+
 .card_profile {
 	background-color: var(--color-vanilla-l);
 	background-image: radial-gradient(circle farthest-side, #DDD3BE, #F7F0E1);
@@ -701,16 +699,14 @@ this circle farthest-side makes radial gradients MUCH better imo.
 	box-shadow: 2px 2px 4px var(--color-espresso-l);
 	display: inline-block;
 	max-width: 45rem;
-	min-width: 300rem;
+	min-width: 10rem;
 	padding: 1.5rem;
 }
 
 .card_profile:hover {
 	box-shadow: 4px 4px 8px var(--color-espresso-l);
 }
-/****
-I am curious as to tricks on setting up text to work in front of ANY photo...I tried my best here with a text shadow and making the background on that button opacity.2 (255 255 255 color)
-*****/
+
 .card_call_to_action {
 	background-attachment: fixed;
 	background-image: url(images/sara-cervera-7m2MRtNTOSE-unsplash.jpg);
@@ -739,12 +735,11 @@ grid containers
 	grid-gap: 1rem;
 	grid-template-columns: 1fr;
 }
-/******
-.grid-card-grid {
-	grid-gap: 1rem;
-	grid-template-columns: 1fr;
-}
 
+.grid-card-grid {
+	padding: 2rem;
+}
+/*************
 .grid-card-callouts {
 	grid-gap: 1rem;
 	grid-template-columns: 1fr;
@@ -752,7 +747,7 @@ grid containers
 ********/
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 700px){
 
 	.grid-card-grid{	
 		grid-template-columns: 1fr 1fr;
@@ -766,12 +761,12 @@ grid containers
 
 
 
-@media screen and (min-width: 900px){
-/********** this did not look good 
-	.grid-card-grid{	
+@media screen and (min-width: 1000px){
+
+	.grid-card-grid {	
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-*****************/
+
 	.grid-card-callouts {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
