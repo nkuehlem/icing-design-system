@@ -45,7 +45,7 @@ html {
 	--color-warning-light:#F5D9CB;
 	--color-neutral:#485BAD;
 	--color-neutral-light:#ABB4D9;
-	--color-success:#35A82D;
+	--color-success:#1a5316;
 	--color-success-light:#A5D9A1;
 
 	/********
@@ -110,7 +110,13 @@ h5 {
 }
 
 h6 {
-	font-size: var(--size-normal-add1);	
+	font-size: 2rem;	
+}
+@media screen and (min-width:700px) {
+
+	h6 {
+		font-size: 3.25rem;
+		}
 }
 
 .logo {
@@ -252,18 +258,18 @@ p {
 	text-align: left;
 }
 
-h1{
-		font-size: 2rem;
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+font-size: 2rem;
 }
 /*
 914px aligns search bar
 */
 @media screen and (min-width:50rem) {
 
-
-	/***************
-I know I know I'm still trying to make the font variables work properly
-***************/
 header h1 {
 	font-size: 3.25rem;
 	}
@@ -292,7 +298,7 @@ hero-banner
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .hero h1{
@@ -619,6 +625,7 @@ textarea {
 	display: block;
 	margin: auto;
 	padding: 1rem;
+	width: 65%;
 }
 
 input, input:visited,
@@ -687,6 +694,11 @@ CARDS
 	padding: 1rem;
 }
 
+.card_article img {
+	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.9));
+	max-height: 20rem;
+	max-width: 45rem;
+}
 .card_article:hover {
 	box-shadow: 4px 4px 8px var(--color-espresso-l);
 }
@@ -832,3 +844,21 @@ img {
 	height: auto; 
 }
 
+.image-single-oval {
+
+	border-radius: 15rem;
+	filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.9));
+
+}
+
+.image-single-shadow {
+
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	transition: box-shadow 0.2s ease-in-out;
+
+}
+.image-single-shadow:hover {
+
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+
+}
